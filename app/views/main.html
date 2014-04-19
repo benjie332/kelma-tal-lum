@@ -1,14 +1,25 @@
-<div class="">
-<div class="row">
-    <div class="span12">
-        <span>Il-Kelma ta' l-llum hija</span>
+<div class="container-fluid">
+    <div class="header text-muted row">
+        <div class="text-right">
+            <img src="http://placehold.it/80x60">
+        </div>
     </div>
-    <div class="kelma">
-        <span class="span12">{{kelma}}</span>
-    </div>
-</div>
 
-<div class="row">
-    Gentilment provdut mill-Kumitat tal-Kelma ta' l-lum.
-</div>
+    <div class="row kelma-block">
+        <div class="row text-muted">
+            <span class="text-left" style="padding-left: 5%">
+            {{kelma.data}}
+            </span>
+        </div>
+        <div class="row kelma text-center">
+            <span>{{kelma.kelma}}</span>
+        </div>
+        <div class="row handwritten ezempju text-center">
+            <span>{{kelma.ezempju}}</span>
+        </div>
+    </div>
+
+    <div class="text-muted footer row">
+        Dan huwa servizz ġentilment provdut mill-Organizzazzjoni Favur l-Għerf Dejjiemi.
+    </div>
 </div>
