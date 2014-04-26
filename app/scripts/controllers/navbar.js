@@ -3,10 +3,10 @@
 angular.module('kelmaTalLumApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'Dar',
       'link': '/'
     }, {
-      'title': 'Settings',
+      'title': 'Konfigurazzjoni',
       'link': '/settings'
     }];
     
