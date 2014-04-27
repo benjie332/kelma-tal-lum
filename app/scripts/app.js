@@ -19,18 +19,23 @@ angular.module('kelmaTalLumApp', [
       })
       .when('/konfigurazzjoni', {
         templateUrl: 'partials/konfigurazzjoni',
-        controller: 'SettingsCtrl',
+        controller: 'KonfigurazzjoniController',
+        authenticate: true
+      })
+      .when('/suggerimenti', {
+        templateUrl: 'partials/suggerimenti',
+        controller: 'SuggerimentiController',
         authenticate: true
       })
       .when('/eduka', {
         templateUrl: 'partials/eduka',
-        controller: 'SettingsCtrl',
+        controller: 'EdukaController',
         authenticate: true
       })
       .otherwise({
         redirectTo: '/'
       });
-      
+
     $locationProvider.html5Mode(true);
       
     // Intercept 401s and redirect you to login
