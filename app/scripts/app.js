@@ -17,8 +17,13 @@ angular.module('kelmaTalLumApp', [
         templateUrl: 'partials/login',
         controller: 'LoginCtrl'
       })
-      .when('/settings', {
-        templateUrl: 'partials/settings',
+      .when('/konfigurazzjoni', {
+        templateUrl: 'partials/konfigurazzjoni',
+        controller: 'SettingsCtrl',
+        authenticate: true
+      })
+      .when('/eduka', {
+        templateUrl: 'partials/eduka',
         controller: 'SettingsCtrl',
         authenticate: true
       })
