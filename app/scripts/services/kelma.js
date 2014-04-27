@@ -8,7 +8,7 @@ app.factory("KelmaTalLum", function($resource) {
     return $resource("/api/illum",  {}, {'query': {method: 'GET', isArray: false}});
 });
 
-app.factory("Suggerimenti", function($resource) {
-    return $resource("/api/suggerimenti");
+app.factory("Suggeriment", function($resource) {
+    return $resource("/api/suggeriment");
 });
 

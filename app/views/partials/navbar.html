@@ -1,13 +1,15 @@
-<div class="header" ng-controller="NavbarCtrl">
-  <ul class="nav nav-pills pull-right">
-      <li ng-class="{active: isActive('/')}"><a href="/">Il-Kelma</a></li>
-      <li ng-class="{active: isActive('/suggerimenti')}"><a href="/suggerimenti">Suggerimenti</a></li>
-      <li ng-show="currentUser" ng-class="{active: isActive('/eduka')}"><a href="/eduka">Eduka</a></li>
-      <li ng-show="currentUser" ng-class="{active: isActive('/konfigurazzjoni')}"><a href="/konfigurazzjoni">Konfigurazzjoni</a></li>
-      <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
-      <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
-  </ul>
-    <div class="text-left">
-        <img src="http://placehold.it/80x60">
+<div ng-controller="NavbarCtrl">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li ng-class="{active: isActive('/')}"><a href="/">Il-Kelma</a></li>
+            <li ng-class="{active: isActive('/suggerimenti')}"><a href="/suggerimenti">Suggerimenti</a></li>
+            <li ng-show="currentUser" ng-class="{active: isActive('/eduka')}"><a href="/eduka">Eduka</a></li>
+            <li ng-show="currentUser" ng-class="{active: isActive('/konfigurazzjoni')}"><a href="/konfigurazzjoni">Konfigurazzjoni</a></li>
+            <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+            <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+        </ul>
+        <div class="text-left">
+            <img src="http://placehold.it/80x60">
+        </div>
     </div>
 </div>

@@ -24,8 +24,7 @@ angular.module('kelmaTalLumApp', [
       })
       .when('/suggerimenti', {
         templateUrl: 'partials/suggerimenti',
-        controller: 'SuggerimentiController',
-        authenticate: true
+        controller: 'SuggerimentiController'
       })
       .when('/eduka', {
         templateUrl: 'partials/eduka',

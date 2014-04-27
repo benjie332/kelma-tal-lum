@@ -1,21 +1,14 @@
 'use strict';
 
 angular.module('kelmaTalLumApp')
-    .controller('SuggerimentiController', function ($scope, User, Auth) {
-        $scope.errors = {};
+    .controller('SuggerimentiController', ['$scope', 'Suggeriment', 'NotificationService', function ($scope, Suggeriment, NotificationService) {
+        $scope.suggeriment = {};
 
-        $scope.changePassword = function(form) {
-            $scope.submitted = true;
-
-            if(form.$valid) {
-                Auth.changePassword( $scope.user.oldPassword, $scope.user.newPassword )
-                    .then( function() {
-                        $scope.message = 'Password successfully changed.';
-                    })
-                    .catch( function() {
-                        form.password.$setValidity('mongoose', false);
-                        $scope.errors.other = 'Incorrect password';
-                    });
+        $scope.isugerixxi = function (form) {
+            if (form.$valid) {
+                var suggeriment = new Suggeriment({'kelma': $scope.suggeriment.kelma, 'ezempju' : $scope.suggeriment.ezempju});
+                suggeriment.$save();
+                NotificationService.success('Grazzi tal-kontribut tieghek');
             }
-        };
-    });
+        }
+    }]);
