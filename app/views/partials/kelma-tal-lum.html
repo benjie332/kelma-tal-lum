@@ -1,16 +1,21 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="container-fluid">
     <div class="row kelma-block">
-        <div class="row text-muted">
-            <span class="text-left" style="padding-left: 5%">
-            {{kelma.data}}
-            </span>
+        <div ng-hide="!kelma" class="row text-center" style="padding:5%;">
+            <p>Il-Kelma tal-Lum għadha ma harġitx.</p><p>Filwaqt li nirringrazjawk tal-interess li urejt, nitolbuk biex tistenna sad-9:30am.</p><p>Grazzi.</p>
         </div>
-        <div class="row kelma text-center">
-            <span>{{kelma.kelma}}</span>
-        </div>
-        <div class="row handwritten ezempju text-center">
-            <span>{{kelma.ezempju}}</span>
+        <div ng-show="!kelma">
+            <div class="row text-muted">
+                <span class="text-left" style="padding-left: 5%">
+                {{kelma.data}}
+                </span>
+            </div>
+            <div class="row kelma text-center">
+                <span>{{kelma.kelma}}</span>
+            </div>
+            <div class="row handwritten ezempju text-center">
+                <span>{{kelma.ezempju}}</span>
+            </div>
         </div>
     </div>
 

@@ -3,11 +3,8 @@
 angular.module('kelmaTalLumApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Dar',
+      'title': 'Il-Kelma',
       'link': '/'
-    }, {
-      'title': 'Konfigurazzjoni',
-      'link': '/settings'
     }];
     
     $scope.logout = function() {

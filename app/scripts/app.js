@@ -5,7 +5,7 @@ angular.module('kelmaTalLumApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'restangular'
+  'angular-momentjs'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider

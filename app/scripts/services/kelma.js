@@ -5,10 +5,10 @@ app.factory('Kelma', function($resource) {
 });
 
 app.factory("KelmaTalLum", function($resource) {
-    return $resource("/api/kelma/kelmaTalLum",  {}, {'query': {method: 'GET', isArray: false}});
+    return $resource("/api/illum",  {}, {'query': {method: 'GET', isArray: false}});
 });
 
 app.factory("Suggerimenti", function($resource) {
-    return $resource("/api/kelma/suggerimenti");
+    return $resource("/api/suggerimenti");
 });
 

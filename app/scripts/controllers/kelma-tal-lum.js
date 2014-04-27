@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('kelmaTalLumApp')
-    .controller('KelmaController', ['$scope', 'KelmaTalLum', function ($scope, KelmaTalLum) {
-        /*$scope.kliem = Restangular.all('kliem').getList().$object;
-        var param = 'latest';
-        $scope.kelma = Restangular.one('kliem', 'query').getList({'test': 'param'}).$object;*/
-        //$scope.kelma = {kelma: 'KELMA', ezempju: 'Bhal meta nghidu bla bla bla', data: '2014-01-01'};
-        KelmaTalLum.query(function(kelma) {
-            console.log(kelma);
-            //$scope.kelma = kelma[0];
+    .controller('KelmaController', ['$scope', '$moment', 'KelmaTalLum', function ($scope, $moment, KelmaTalLum) {
+        KelmaTalLum.query({data: $moment()}, function(kelma) {
+            if (kelma) {
+                $scope.kelma = {kelma : kelma._id, ezempju: kelma.ezempju, data: $moment(kelma.data).format('YYYY-MM-DD')};
+            } else {
+                $scope.kelma = {};
+            }
+
         });
 }]);
