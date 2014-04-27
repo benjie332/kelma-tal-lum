@@ -1,2 +1,28 @@
 <div ng-include="'partials/navbar.html'"></div>
 Eduka
+
+<div>
+    <span class="warning">Il-Poplu diġa għaraf l-għaqal tal-Kumitat.</span>
+    <span>M'hemmx għalfejn inkomplu nedukaw illum.</span>
+</div>
+<div>
+    <div class="list-group">
+        <div ng-repeat="suggeriment in suggerimenti" class="list-group-item list-group-item-info">
+            <div class="">
+                <input ng-click="nikkontemplaw(suggeriment)" type="radio" id="{{suggeriment._id}}" name="ghazla">
+                <label ng-click="nikkontemplaw(suggeriment)" for="{{suggeriment._id}}">{{suggeriment._id}}</label>
+            </div>
+            <div class="panel" ng-show="ilKandidat === suggeriment">
+                <div>
+                    <label for="text_{{suggeriment._id}}" class="col-xs-2">Is-Suggeriment</label>
+                    <input type="text" id="text_{{suggeriment._id}}" ng-model="suggeriment._id">
+                </div>
+                <div>
+                    <label for="{{suggeriment.ezempju}}" class="col-xs-2">L-Ezempju</label>
+                    <input type="text" id="{{suggeriment.ezempju}}" ng-model="suggeriment.ezempju">
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="button" class="btn btn-success" value="Eduka lil Poplu" ng-click="eduka()">
+</div>
