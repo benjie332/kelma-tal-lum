@@ -1,8 +1,8 @@
 <div ng-include="'partials/navbar.html'"></div>
 Eduka
 
-<div>
-    <span class="warning">Il-Poplu diġa għaraf l-għaqal tal-Kumitat.</span>
+<div ng-show="kelmaTalLum" class="bg-warning text-warning well">
+    <span>Il-Poplu diġa għaraf l-għaqal tal-Kumitat.</span>
     <span>M'hemmx għalfejn inkomplu nedukaw illum.</span>
 </div>
 <div>
@@ -15,14 +15,14 @@ Eduka
             <div class="panel" ng-show="ilKandidat === suggeriment">
                 <div>
                     <label for="text_{{suggeriment.kelma}}" class="col-xs-2">Is-Suggeriment</label>
-                    <input type="text" id="text_{{suggeriment.kelma}}" ng-model="suggeriment.kelma">
+                    <input type="text" id="text_{{suggeriment.kelma}}" ng-model="suggeriment.kelma" ng-change="irranga(suggeriment)">
                 </div>
                 <div>
                     <label for="{{suggeriment.ezempju}}" class="col-xs-2">L-Ezempju</label>
-                    <input type="text" id="{{suggeriment.ezempju}}" ng-model="suggeriment.ezempju">
+                    <input type="text" id="{{suggeriment.ezempju}}" ng-model="suggeriment.ezempju" ng-change="irranga(suggeriment)">
                 </div>
             </div>
         </div>
     </div>
-    <input type="button" class="btn btn-success" value="Eduka lil Poplu" ng-click="eduka()">
+    <input type="button" class="btn btn-success" ng-class="{disabled: kelmaTalLum}" value="Eduka lil Poplu" ng-click="eduka()">
 </div>
