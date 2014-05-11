@@ -9,13 +9,13 @@ Eduka
     <div class="list-group">
         <div ng-repeat="suggeriment in suggerimenti" class="list-group-item list-group-item-info">
             <div class="">
-                <input ng-click="nikkontemplaw(suggeriment)" type="radio" id="{{suggeriment._id}}" name="ghazla">
-                <label ng-click="nikkontemplaw(suggeriment)" for="{{suggeriment._id}}">{{suggeriment._id}}</label>
-            </div>
+                <input ng-click="nikkontemplaw(suggeriment)" type="radio" id="{{suggeriment.kelma}}" name="ghazla">
+                <label ng-click="nikkontemplaw(suggeriment)" for="{{suggeriment.kelma}}">{{suggeriment.kelma}}</label>
+        </div>
             <div class="panel" ng-show="ilKandidat === suggeriment">
                 <div>
-                    <label for="text_{{suggeriment._id}}" class="col-xs-2">Is-Suggeriment</label>
-                    <input type="text" id="text_{{suggeriment._id}}" ng-model="suggeriment._id">
+                    <label for="text_{{suggeriment.kelma}}" class="col-xs-2">Is-Suggeriment</label>
+                    <input type="text" id="text_{{suggeriment.kelma}}" ng-model="suggeriment.kelma">
                 </div>
                 <div>
                     <label for="{{suggeriment.ezempju}}" class="col-xs-2">L-Ezempju</label>

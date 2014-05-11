@@ -1,14 +1,10 @@
 var app = angular.module('kelmaTalLumApp');
 
-app.factory('Kelma', function($resource) {
-    return $resource('/api/kelma/',  {}, {'query': {method: 'GET', isArray: true}});
+app.factory('Kelma', function ($resource) {
+    return $resource('/api/kelma/:id', {'id': '@_id'},
+        {
+            'query': {method: 'GET', isArray: true},
+            'talLum': {method: 'GET', isArray: false},
+            'suggerimenti': {method: 'GET', isArray: true, params: {suggerimenti: true}}
+        });
 });
-
-app.factory("KelmaTalLum", function($resource) {
-    return $resource("/api/illum",  {}, {'query': {method: 'GET', isArray: false}});
-});
-
-app.factory("Suggeriment", function($resource) {
-    return $resource("/api/suggeriment");
-});
-
