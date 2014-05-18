@@ -536,6 +536,11 @@ module.exports = function (grunt) {
     grunt.task.run(['build']);
   });
 
+  grunt.registerTask('heroku:production', function () {
+    grunt.log.info('Building for heroku production');
+    grunt.task.run(['build']);
+  });
+
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
