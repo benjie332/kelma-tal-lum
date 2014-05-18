@@ -537,7 +537,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('heroku:production', function () {
-    grunt.log.info('Building for heroku production');
+    grunt.log.warn('Building for heroku production ("heroku" deprecated)');
     grunt.task.run(['build']);
   });
 
