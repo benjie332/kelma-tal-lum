@@ -20,9 +20,26 @@ body {
 }
 
 .kelma-block {
+  position: relative;
   padding-top: 5%;
   padding-bottom: 5%;
   background-color: #EEFC9F;
+  width: 410px;
+  margin: 0 auto;
+  height: 300px;
+  box-shadow: 10px 10px rgba(218, 216, 216, 0.6);
+  -webkit-transform: rotate(-4deg);
+}
+
+
+.kelma-block:after {
+  content : "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 20px 0 0 20px;
+  border-style: solid;
+  border-color: rgba(212, 215, 90, 1) #FFF;
 }
 
 .kelma {
@@ -30,7 +47,7 @@ body {
 }
 
 .ezempju {
-  font-size: 25px;
+  font-size: 17px;
 }
 
 .header,
