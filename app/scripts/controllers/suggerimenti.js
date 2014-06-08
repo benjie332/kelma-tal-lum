@@ -9,7 +9,7 @@ angular.module('kelmaTalLumApp')
                 var suggeriment = new Kelma({'kelma': $scope.suggeriment.kelma, 'ezempju' : $scope.suggeriment.ezempju});
                 suggeriment.$save();       
                 //TODO: have this actually check to see if the save worked (eg 404s)
-                NotificationService.success('Grazzi tal-kontribut tieghek. Il-kelma '+$scope.suggeriment.kelma+' qed tigi diskussa fil-Kumitat');
+                NotificationService.success('Grazzi tal-kontribut tiegħek. Il-kelma '+$scope.suggeriment.kelma+' qed tiġi diskussa fil-Kumitat');
                 $scope.suggeriment = {};
             }
         };
