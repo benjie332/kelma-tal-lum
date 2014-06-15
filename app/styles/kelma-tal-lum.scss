@@ -81,7 +81,7 @@ body {
    margin: 0 auto;
 }
 
-.issuggerixxi-paper .bicca {
+ .bicca {
   border-bottom: 1px dotted #ccc;
   text-align: center;
   height: auto;
@@ -89,18 +89,24 @@ body {
   text-transform: capitalize;
 }
 
-.issuggerixxi-paper div.kelma input {
+.issuggerixxi-paper .bicciet,
+.ezempju {
+	border-bottom : none;
+}
+
+.kelma input {
 	font-size : 34px;
 	width: 400px;
 }
 
-.issuggerixxi-paper div.ezempju textarea {
+.ezempju textarea {
 	font-size : 14px;
 	width: 400px;
 }
 
 .buttuna {
 	text-align: center;
+	padding : 3px;
 }
 
 .buttuna div a{
