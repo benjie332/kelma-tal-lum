@@ -66,6 +66,62 @@ body {
     border-top: 1px solid #e5e5e5;
 }
 
+.issuggerixxi-holder {
+  background-color: #f5f5f5;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #dedede;
+}
+
+.issuggerixxi-paper {
+	padding: 10px; 
+	width: 500px;
+   font-family: courier, monospace;
+   margin: 0 auto;
+}
+
+ .bicca {
+  border-bottom: 1px dotted #ccc;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.issuggerixxi-paper .bicciet,
+.ezempju {
+	border-bottom : none;
+}
+
+.kelma input {
+	font-size : 34px;
+	width: 400px;
+}
+
+.ezempju textarea {
+	font-size : 14px;
+	width: 400px;
+}
+
+.buttuna {
+	text-align: center;
+	padding : 3px;
+}
+
+.buttuna div a{
+	color: white;
+	text-decoration: none;
+	background-color: #428BCA;
+	padding: 5px;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.buttuna div a:hover {
+		text-decoration: underline;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */

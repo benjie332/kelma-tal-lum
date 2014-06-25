@@ -1,10 +1,22 @@
 <div ng-include="'partials/navbar.html'"></div>
-Suggerimenti
-
-<form class="form" name="form" ng-submit="isugerixxi(form)" >
-    <label for="kelma">Kelma</label>
-    <input type="text" id="kelma" name="kelma" ng-model="suggeriment.kelma">
-    <label for="ezempju">Ezempju</label>
-    <input type="text" id="ezempju" name="ezempju" ng-model="suggeriment.ezempju">
-    <button type="Submit" class="button">Issugerixxi</button>
-</form>
+<div class="issuggerixxi-holder">
+	<!-- <form class="form" name="form" ng-submit="isugerixxi(form)" >
+	    <label for="kelma">Kelma</label>
+	    <input type="text" id="kelma" name="kelma" ng-model="suggeriment.kelma">
+	    <label for="ezempju">Ezempju</label>
+	    <input type="text" id="ezempju" name="ezempju" ng-model="suggeriment.ezempju">
+	    <button type="Submit" class="button">Issugerixxi</button>
+	</form> -->
+	<div class="issuggerixxi-paper">
+		<form class="form" name="form" ng-submit="isugerixxi(form)" >
+			<div class="bicciet">
+				<div class="bicca"><h2>Suġġeriment</h2></div>
+				<div class="bicca kelma"><input type="text" id="kelma" name="kelma" ng-model="suggeriment.kelma" placeholder="Kelma"/></div>
+				<div class="bicca ezempju"><textarea id="ezempju" name="ezempju" ng-model="suggeriment.ezempju" placeholder="Bħal meta ngħidu ... "></textarea></div>
+			</div>
+			<div class="buttuna">
+				<div><a ng-click="isugerixxi(form)">Agħddiha Kumitat</a></div>
+			</div>
+		</form>
+	</div>
+</div>
